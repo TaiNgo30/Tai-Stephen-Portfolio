@@ -1,12 +1,14 @@
 import { Socials } from '@/constants'
 import React from 'react'
+import Image from 'next/image';
+
 
 const Navbar = () => {
     return (
         <div className='w-full h-[65px] fixed top-0 shadow-lg shadow-[#2A0E61]/50 bg-[#03001417] backdrop-blur-md z-50 px-10'>
             <div className="w-full h-full flex flex-row items-center justify-between m-auto px-[10px]">
                 <a href='#about-me' className='h-auto w-auto flex flex-row items-center'>
-                    <img
+                    <Image
                         src="/Space Portfolio Assets/NavLogo.png"
                         alt="logo"
                         width={70}
@@ -30,7 +32,7 @@ const Navbar = () => {
                 <div className='flex flex-row gap-5'>
                     {Socials.map((social) => (
                         <a href={social.link} target="_blank" rel="noopener noreferrer" key={social.name}>
-                            <img
+                            <Image
                                 src={social.src}
                                 alt={social.name}
                                 key={social.name}
