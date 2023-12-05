@@ -48,13 +48,13 @@ const HeroContent = () => {
                     I&apos;m Tai (Stephen) Duc Ngo. I am currently studying for a degree in Software Engineering at FPT University in Hanoi.
                 </motion.p>
                 <motion.button
-                    variants={slideInFromLeft(1)}
-                    className="py-2 button-primary text-center text-white cursor-pointer rounded-lg max-w-[200px]"
-                    onClick={toggleModal}
                     variants={{
+                        ...slideInFromLeft(1),
                         hidden: { opacity: 0 },
                         show: { opacity: 1 }
                     }}
+                    className="py-2 button-primary text-center text-white cursor-pointer rounded-lg max-w-[200px]"
+                    onClick={toggleModal}
                     initial="hidden"
                     animate="show"
                 >
